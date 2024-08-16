@@ -213,7 +213,7 @@ class DP3Encoder(nn.Module):
                  ):
         super().__init__()
         self.imagination_key = 'imagin_robot'
-        self.state_key = 'agent_pos'
+        self.state_key = 'joint_pos'
         self.point_cloud_key = 'point_cloud'
         self.rgb_image_key = 'image'
         self.n_output_channels = out_channel
