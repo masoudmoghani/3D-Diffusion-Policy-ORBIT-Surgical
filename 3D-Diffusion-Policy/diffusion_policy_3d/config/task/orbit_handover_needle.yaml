@@ -8,10 +8,10 @@ shape_meta: &shape_meta
       shape: [1024, 3]
       type: point_cloud
     joint_pos:
-      shape: [8]
+      shape: [16]
       type: low_dim
   action:
-    shape: [7]
+    shape: [14]
 
 env_runner:
   _target_: diffusion_policy_3d.env_runner.orbit_runner.OrbitRunner
@@ -22,7 +22,7 @@ env_runner:
 
 dataset:
   _target_: diffusion_policy_3d.dataset.orbit_dataset.OrbitDataset
-  zarr_path: /home/mas/Documents/github/orbit-surgical-org/orbit-surgical-nv/logs/dp3/Isaac-Lift-Block-PSM-IK-Rel-v0/lift_block_d3_100_rel.zarr
+  zarr_path: /home/mas/Downloads/needle_handover_d3_2024-08-21_rel-cleaned.zarr/lift_needle_d3_2024-08-21_rel-cleaned.zarr
   horizon: ${horizon}
   pad_before: ${eval:'${n_obs_steps}-1'}
   pad_after: ${eval:'${n_action_steps}-1'}

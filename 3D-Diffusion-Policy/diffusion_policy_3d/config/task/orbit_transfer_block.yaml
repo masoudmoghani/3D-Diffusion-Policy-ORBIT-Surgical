@@ -1,6 +1,6 @@
-name: orbit_needlelift
+name: orbit_transfer
 
-task_name: orbit_needlelift
+task_name: orbit_transfer
 
 shape_meta: &shape_meta
   obs:
@@ -22,7 +22,7 @@ env_runner:
 
 dataset:
   _target_: diffusion_policy_3d.dataset.orbit_dataset.OrbitDataset
-  zarr_path: /home/mas/Documents/github/orbit-surgical-org/orbit-surgical-nv/logs/dp3/Isaac-Lift-Block-PSM-IK-Rel-v0/lift_block_d3_100_rel.zarr
+  zarr_path: /home/mas/Documents/github/orbit-surgical-org/orbit-surgical-nv/logs/dp3/Isaac-Transfer-Block-PSM-IK-Rel-v0/transfer_block_board_d3_30_rel.zarr
   horizon: ${horizon}
   pad_before: ${eval:'${n_obs_steps}-1'}
   pad_after: ${eval:'${n_action_steps}-1'}
