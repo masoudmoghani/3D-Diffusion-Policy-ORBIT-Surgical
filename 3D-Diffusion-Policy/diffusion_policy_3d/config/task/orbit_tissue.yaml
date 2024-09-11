@@ -1,6 +1,6 @@
-name: orbit_transfer
+name: orbit_needlelift
 
-task_name: orbit_transfer
+task_name: orbit_needlelift
 
 shape_meta: &shape_meta
   obs:
@@ -22,7 +22,7 @@ env_runner:
 
 dataset:
   _target_: diffusion_policy_3d.dataset.orbit_dataset.OrbitDataset
-  zarr_path: /home/mas/Downloads/52_d3_peg_transfer_2024-09-06_rel-RAW.zarr/d3_2024-09-06.zarr
+  zarr_path: /home/mas/Downloads/2024-09-10-tissue_lift.zarr/d3_2024-09-10.zarr
   horizon: ${horizon}
   pad_before: ${eval:'${n_obs_steps}-1'}
   pad_after: ${eval:'${n_action_steps}-1'}

@@ -22,7 +22,7 @@ env_runner:
 
 dataset:
   _target_: diffusion_policy_3d.dataset.orbit_dataset.OrbitDataset
-  zarr_path: /home/mas/Documents/github/orbit-surgical-org/orbit-surgical-nv/logs/dp3/Isaac-Lift-Block-PSM-IK-Rel-v0/lift_block_d3_100_rel.zarr
+  zarr_path: /home/mas/Downloads/52_d3_back_needle_lift_2024-09-05_rel.zarr/d3_2024-09-05_no-padding.zarr
   horizon: ${horizon}
   pad_before: ${eval:'${n_obs_steps}-1'}
   pad_after: ${eval:'${n_action_steps}-1'}

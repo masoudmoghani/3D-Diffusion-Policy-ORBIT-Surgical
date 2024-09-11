@@ -22,7 +22,7 @@ env_runner:
 
 dataset:
   _target_: diffusion_policy_3d.dataset.orbit_dataset.OrbitDataset
-  zarr_path: /home/mas/Downloads/needle_handover_d3_2024-08-21_rel-cleaned.zarr/lift_needle_d3_2024-08-21_rel-cleaned.zarr
+  zarr_path: /home/mas/Downloads/52_d3_back_needle_handover_2024-09-05_rel.zarr/d3_2024-09-05_cleaned.zarr
   horizon: ${horizon}
   pad_before: ${eval:'${n_obs_steps}-1'}
   pad_after: ${eval:'${n_action_steps}-1'}
